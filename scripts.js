@@ -1,5 +1,8 @@
 let myLibrary = ['Book 1', 'Book 2', 'Book 3', 'Book 4'];
 const displayList = document.querySelector('ul');
+const newBook = document.getElementById("new-book");
+const bookForm = document.querySelector('form');
+const overlay = document.getElementById('overlay');
 
 
 function Book(title, author, pages, read) {
@@ -25,3 +28,9 @@ function bookList() {
     })};
 
 displayList.addEventListener('load', bookList())
+
+newBook.addEventListener('click', () => {
+    overlay.style.display = 'inline-block';
+    /* bookForm.style.display = 'flex';*/
+})
+

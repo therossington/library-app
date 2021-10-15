@@ -1,6 +1,7 @@
 body {
     background-color:#f5f0e1;
     margin: 0;
+    position: relative;
 }
 
 .main {
@@ -59,3 +60,50 @@ h1 {
     flex-wrap: wrap;
     gap: 50px;
 }
+
+#new-book {
+    background-color: #1e3d59;
+    border: none;
+    font-family: sans-serif;
+    font-size: 24px;
+    width: 150px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    color: #ff6e40;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#new-book:hover {
+    color: #ffc13b;
+    background-color: #2f5577;
+}
+
+#overlay {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.0.5);
+    z-index: 2;
+}
+
+.book-form { 
+    display: none;  
+    flex-direction: column;   
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 50px;
+    color: #ff6e40;
+    border-radius: 5px;
+    background-color: #1e3d59;
+}
+
