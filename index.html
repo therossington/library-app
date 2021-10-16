@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Library App</title>
@@ -14,25 +13,31 @@
     </div>
     <div class="book-list">
         <h2 class="list-heading">Books</h2>
-        <ul class="list"></ul>
-    </div>
-    <form class="book-form">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title">
-        <label for="author">Author</label>
-        <input type="text" id="author" name="author">
-        <label for="pages">No. pages</label>
-        <input type="number" id="pages" name="pages">
-        <p>Have you read the book?</p>
-        <div>
-            <label for="yes">Yes</label>
-            <input type="radio" id="yes" name="read" value="yes">
-            <label for="no">No</label>
-            <input type="radio" id="no" name="read" value="no">
+     </div>
+    <div class="overlay">
+        <div class="book-form">
+            <div class="form-header">
+                <h3>New book</h3>
+                <p id="close-form">X</p>
+            </div>
+            <label for="title">Title</label>
+            <input class="text-input" type="text" id="title" name="title">
+            <label for="author">Author</label>
+            <input class="text-input" type="text" id="author" name="author">
+            <label for="pages">No. pages</label>
+            <input class="text-input" type="number" id="pages" name="pages">
+            <p>Have you read the book?</p>
+            <div>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="read" value="yes">
+                <label for="no">No</label>
+                <input type="radio" id="no" name="read" value="no">
+            </div>
+            <div class="submit-container">    
+                <button class="submit">Submit</button>
+            </div>
         </div>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="overlay">Overlay</div>
+    </div>
     <script src="scripts.js" defer></script>    
 </body>
 </html>
