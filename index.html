@@ -13,6 +13,31 @@
     </div>
     <div class="book-list">
         <h2 class="list-heading">Books</h2>
+        <table>
+            <tr id="default">
+                <th class="table-heading">Title</th>
+                <th class="table-heading">Author</th>
+                <th class="table-heading">No. Pages</th>
+                <th class="table-heading">Have you read the book?</th>
+                <th class="table-heading">Toggle read status</th>
+                <th class="table-heading">Delete book</th>
+            </tr>
+            <tr>
+                <td>The Hobbit</td>
+                <td>J.R.R Tolkien</td>
+                <td>310</td>
+                <td>No</td>
+                <td>
+                    <label for="read">Read</label>
+                    <input type="radio" id="read" name="read-status" value="read">
+                    <label for="not-read">Not read</label>
+                    <input type="radio" id="not-read" name="read-status" value="not-read">
+                </td>
+                <td>
+                    <button class="delete-button">Delete book</button>
+                </td>
+            </tr>
+        </table>
      </div>
     <div class="overlay">
         <div class="book-form">
@@ -38,6 +63,9 @@
             </div>
         </div>
     </div>
-    <script src="scripts.js" defer></script>    
+    <div class="footer">
+        <p class="footer-content">© Copyright 2021</p>
+    </div>
+    <script src="scripts.js" defer></script>
 </body>
 </html>

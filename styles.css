@@ -1,13 +1,10 @@
 body {
-    background-color:#f5f0e1;
-    margin: 0;
-    min-height: 100%;
-}
-
-.main {
     display: flex;
     position: relative;
     flex-direction: column;
+    background-color:#f5f0e1;
+    margin: 0;
+    min-height: 100%;
 }
 
 .heading {
@@ -19,9 +16,10 @@ body {
 .book-list {
     display: flex;
     flex-direction: column;
-    padding-top: 30;
+    padding-top: 30px;
     padding-left: 100px;
-    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-bottom: 400px;
     background-color: #1e3d59;
 }
 
@@ -32,39 +30,11 @@ body {
     color:#ff6e40;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0px;
-    margin-top: 10px;
-}
-
-li {
-    display: flex;
-    justify-content: center;
-    font-family: sans-serif;
-    font-size: 26px;
-    font-weight: bold;
-    color: #ff6e40;
-    border-left: 1px solid #ff6e40;
-    border-right: 1px solid #ff6e40;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 150px;
-    height: auto;
-}
-
 h1 {
     font-family: sans-serif;
     font-size: 50px;
     color: #1e3d59;
     font-weight: bold;
-}
-
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-bottom: 0px;
 }
 
 #new-book {
@@ -184,13 +154,6 @@ h3 {
     margin: 0px;
 }
 
-.delete-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-top: 0px;
-}
-
 .delete-button {
     font-family: sans-serif;
     font-size: 16px;
@@ -210,3 +173,45 @@ h3 {
     box-shadow: 0 4px rgba(0,0,0,0.5);
     transform: translateY(4px);
 }
+
+table {
+    height: 90px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border-bottom: 2px solid #ff6e40;
+}
+
+td {
+    text-align: center;
+    color: #ff6e40;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.table-heading {
+    color:#ff6e40;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}
+
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-content {
+    text-align: center;
+    font-family: sans-serif;
+    color:#1e3d59;
+    font-size: 18px;
+    font-weight: bold;
+}
+

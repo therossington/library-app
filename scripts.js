@@ -1,11 +1,12 @@
 let myLibrary = [];
+let listItem = "";
 const newBook = document.querySelector('#new-book');
 const bookForm = document.querySelector('.book-form');
 const overlay = document.querySelector('.overlay');
 const submit = document.querySelector('.submit');
 const formClose = document.querySelector('#close-form');
-const library = document.querySelector('.book-list');
-const mainPage = document.querySelector('.main');
+const library = document.querySelector('tbody');
+const mainPage = document.querySelector('body');
 
 
 function Book(title, author, pages, read) {
@@ -29,27 +30,20 @@ function addBookToLibrary() {
     myLibrary.push(newEntry);
 }
 
-const displayList = document.createElement('ul');
-const deleteContainer = document.createElement('ul');
-deleteContainer.classList.add('delete-container');
-displayList.classList.add('list');
-library.appendChild(displayList);
-library.appendChild(deleteContainer);
-
-
-
 function bookList() {
     myLibrary.forEach((myLibrary) => {
-        const listItem = document.createElement('li');
-        const deleteList = document.createElement('li');
-        const deleteButton = document.createElement('button');
-        deleteButton.classList.add('delete-button');
-        displayList.appendChild(listItem);
-        deleteContainer.appendChild(deleteList);
-        deleteList.appendChild(deleteButton);
-        deleteButton.textContent = 'Delete book';
-        listItem.textContent += myLibrary.title;
+        const displayList = document.createElement('tr');
+        const titleItem = document.createElement('td');
+        const readItem = document.createElement('td');
+        const pagesItem = document.createElement('td');
+        
+
     })};
+
+function clearForm() {
+    listItem = "";
+}
+
 
 mainPage.addEventListener('load', bookList());
 
@@ -72,6 +66,3 @@ formClose.addEventListener('click', () => {
     bookForm.style.display = 'none';
 })
 
-function clearForm() {
-    listItem.textContent = ""; 
-}
