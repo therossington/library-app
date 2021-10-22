@@ -154,7 +154,7 @@ h3 {
     margin: 0px;
 }
 
-.delete-button {
+.delete-button, .read-button {
     font-family: sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -165,11 +165,11 @@ h3 {
     color: #1e3d59;
 }
 
-.delete-button:hover {
+.delete-button:hover, .read-button:hover {
     background-color: rgba(245, 240, 225, 0.8);
 }
 
-.delete-button:active {
+.delete-button:active, .read-button:active {
     box-shadow: 0 4px rgba(0,0,0,0.5);
     transform: translateY(4px);
 }
@@ -215,3 +215,6 @@ input[type=radio] {
     font-weight: bold;
 }
 
+tr {
+    height: 50px;
+}
