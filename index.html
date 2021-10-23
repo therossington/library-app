@@ -31,20 +31,20 @@
                 <p id="close-form">X</p>
             </div>
             <label for="title">Title</label>
-            <input class="text-input" type="text" id="title" name="title">
+            <input class="text-input" type="text" id="title" name="title" required>
             <label for="author">Author</label>
-            <input class="text-input" type="text" id="author" name="author">
+            <input class="text-input" type="text" id="author" name="author" required>
             <label for="pages">No. pages</label>
-            <input class="text-input" type="number" id="pages" name="pages">
+            <input class="text-input" type="number" id="pages" name="pages" required>
             <p>Have you read the book?</p>
             <div>
                 <label for="yes-read">Yes</label>
-                <input type="radio" id="yes-read" name="read" value="Yes">
+                <input type="radio" id="yes-read" name="read" value="Yes" required>
                 <label for="no-read">No</label>
-                <input type="radio" id="no-read" name="read" value="No">
+                <input type="radio" id="no-read" name="read" value="No" required>
             </div>
             <div class="submit-container">    
-                <button class="submit">Submit</button>
+                <button class="submit" type="submit">Submit</button>
             </div>
         </div>
     </div>

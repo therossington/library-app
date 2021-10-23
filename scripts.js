@@ -7,7 +7,6 @@ const formClose = document.querySelector('#close-form');
 const library = document.querySelector('tbody');
 const mainPage = document.querySelector('body');
 
-
 function Book(title, author, pages, read, entryId) {
     this.title = title,
     this.author = author,
@@ -20,6 +19,15 @@ let titleEntry = document.querySelector('#title');
 let authorEntry = document.querySelector('#author');
 let pagesEntry = document.querySelector('#pages');
 
+function addBookToLibrary() {
+    let title = titleEntry.value;
+    let author = authorEntry.value;
+    let pages = pagesEntry.value;
+    let read = document.querySelector('input[name="read"]:checked').value;
+    let entryId = '';
+    let newEntry = new Book(title, author, pages, read, entryId);
+    myLibrary.push(newEntry);
+}
 
 function bookList() {
     const displayList = document.createElement('tr');
@@ -31,7 +39,13 @@ function bookList() {
     const deleteTable = document.createElement('td');
     const statusChange = document.createElement('button');
     const deleteButton = document.createElement('button');
-    
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].title == myLibrary[i].title) {
+            myLibrary[i].entryId = i;
+        }
+    }    
+
     myLibrary.forEach((myLibrary) => {
         library.appendChild(displayList);
         bookTitle.textContent = `${myLibrary.title}`;
@@ -42,9 +56,11 @@ function bookList() {
         statusChange.classList.add('read-button');
         statusChange.textContent = 'Change read status';
         statusTable.appendChild(statusChange);
+        statusChange.setAttribute('data-id',`${myLibrary.entryId}`)
         deleteButton.classList.add('delete-button');
         deleteButton.textContent = 'Delete book';
         deleteTable.appendChild(deleteButton);
+        deleteButton.setAttribute('data-id',`${myLibrary.entryId}`)
     
         displayList.appendChild(bookTitle);
         displayList.appendChild(bookAuthor);
@@ -52,20 +68,8 @@ function bookList() {
         displayList.appendChild(bookRead);
         displayList.appendChild(statusTable);
         displayList.appendChild(deleteTable);
-
-        /* myLibrary.entryId = myLibrary.findIndex(x => x.title === "Cameron's book")*/
     })
 }           
-
-function addBookToLibrary() {
-    let title = titleEntry.value;
-    let author = authorEntry.value;
-    let pages = pagesEntry.value;
-    let read = document.querySelector('input[name="read"]:checked').value;
-    let entryId = '';
-    let newEntry = new Book(title, author, pages, read, entryId);
-    myLibrary.push(newEntry);
-}
 
 newBook.addEventListener('click', () => {
     overlay.style.display = 'flex';
