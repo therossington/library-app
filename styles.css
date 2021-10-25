@@ -219,3 +219,13 @@ tr {
     height: 50px;
 }
 
+.validation.title, .validation.author, 
+    .validation.read, .validation.pages  {
+        display: none;
+        color: red;
+        font-weight: bold;
+}
+
+.disabled {
+    pointer-events: none;
+}

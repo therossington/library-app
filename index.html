@@ -32,10 +32,13 @@
             </div>
             <label for="title">Title</label>
             <input class="text-input" type="text" id="title" name="title" required>
+            <p class="validation title">Please enter a book title.</p>
             <label for="author">Author</label>
             <input class="text-input" type="text" id="author" name="author" required>
+            <p class="validation author">Please enter an author.</p>
             <label for="pages">No. pages</label>
             <input class="text-input" type="number" id="pages" name="pages" required>
+            <p class="validation pages">Please enter the number of pages.</p>
             <p>Have you read the book?</p>
             <div>
                 <label for="yes-read">Yes</label>
@@ -43,6 +46,7 @@
                 <label for="no-read">No</label>
                 <input type="radio" id="no-read" name="read" value="No" required>
             </div>
+            <p class="validation read">Please select wheter you have read the book or not.</p>
             <div class="submit-container">    
                 <button class="submit" type="submit">Submit</button>
             </div>
