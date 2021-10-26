@@ -6,7 +6,6 @@ const submit = document.querySelector('.submit');
 const formClose = document.querySelector('#close-form');
 const library = document.querySelector('tbody');
 const mainPage = document.querySelector('body');
-const inputs = document.querySelectorAll('input');
 let id = '';
 
 function Book(title, author, pages, read, entryId) {
@@ -20,21 +19,6 @@ function Book(title, author, pages, read, entryId) {
 let titleEntry = document.querySelector('#title');
 let authorEntry = document.querySelector('#author');
 let pagesEntry = document.querySelector('#pages');
-
-const validation = document.querySelector('.validation');
-
-function titleValidation() {
-    if (titleEntry.value == '') {
-        validation.classList.add('title');
-        validation.style.display = 'Block';
-        submit.classList.add('disabled');
-    }
-}
-
-function removeValidation() {
-    validation.style.display = 'none';
-    submit.classList.remove('disabled');
-}
 
 function addBookToLibrary() {
     let title = titleEntry.value;
@@ -114,17 +98,14 @@ newBook.addEventListener('click', () => {
 
 
 submit.addEventListener('click', () => {
-    titleValidation();  
     addBookToLibrary();
     bookList();
     overlay.style.display = 'none';
     bookForm.style.display = 'none';
-    removeValidation();
 })
 
 formClose.addEventListener('click', () => {
     overlay.style.display = 'none';
     bookForm.style.display = 'none';
-    removeValidation();
 })
 
