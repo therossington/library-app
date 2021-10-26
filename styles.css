@@ -21,6 +21,7 @@ body {
     padding-right: 100px;
     padding-bottom: 400px;
     background-color: #1e3d59;
+    min-height: 300px;
 }
 
 .list-heading {
